@@ -1,0 +1,108 @@
+.root{
+    -fx-background-color: #e5e5e5 ;
+}
+
+.title-pane{
+    -fx-background-color: radial-gradient(focus-angle 291deg , focus-distance 59% , center 50% 50% , radius 55% , #ABC7DE, #31627B);
+    /*-fx-background-color: #31627B ;*/
+    -fx-background-radius: 20 20 0 0 ;
+    -fx-effect: dropshadow(gaussian, rgb(0, 0, 0, 0.4), 10, 0.6, 2, 4);
+}
+
+.title-label{
+    -fx-effect: dropshadow(gaussian, rgb(0, 0, 0, 0.4), 10, 0.6, 2, 4);
+}
+
+.center-pane{
+    -fx-background-color: #fff;
+    -fx-background-radius: 0 0 20 20 ;
+    -fx-effect: dropshadow(gaussian, rgb(0, 0, 0, 0.4), 10, 0.6, 2, 4);
+}
+
+.inner-panes{
+    -fx-background-radius: 8;
+}
+
+.text-field{
+    -fx-background-color: transparent;
+    -fx-border-color: #000;
+    -fx-border-width: 0 0 1px 0 ;
+    -fx-min-height: 30 ;
+    -fx-max-height: 30 ;
+    -fx-font-family: Consolas;
+    -fx-font-size: 16 ;
+    -fx-cursor: text;
+}
+
+.text-field:focused{
+    -fx-border-width: 1 ;
+    -fx-border-color: #4285F4;
+}
+
+.text-field:hover{
+    -fx-background-color: rgb(255, 255, 255, 0.3) ;
+}
+
+.button{
+    -fx-background-color: #4285F4 ;
+    -fx-icon-color: #fff;
+    -fx-background-radius: 8;
+    -fx-cursor: hand ;
+    -fx-font-family: "Arial Rounded MT Bold" ;
+    -fx-font-size: 16;
+    -fx-text-fill: #fff;
+    -fx-effect: dropshadow(gaussian, rgb(0, 0, 0, 0.2), 10, 0.6, 1, 2);
+}
+
+
+.button:hover{
+    -fx-background-color: #fff;
+    -fx-text-fill: #4285F4;
+    -fx-icon-color: #4285F4 ;
+}
+
+.button:pressed{
+    -fx-background-color: #4285F4 ;
+    -fx-icon-color: #fff;
+    -fx-text-fill: #fff;
+}
+
+.clear-button{
+}
+
+.clear-button:hover{
+    -fx-background-color: #fff;
+    -fx-text-fill: #ff0000;
+    -fx-icon-color: #ff0000 ;
+}
+
+.clear-button:pressed{
+    -fx-background-color: #4285F4 ;
+    -fx-icon-color: #fff;
+    -fx-text-fill: #fff;
+}
+
+.close-button{
+    -fx-background-color: #31627B;
+    -fx-icon-color: #fff;
+    -fx-cursor: hand ;
+    -fx-max-width: 50 ;
+    -fx-background-radius: 50;
+    -fx-effect: dropshadow(gaussian, rgb(0, 0, 0, 0.2), 10, 0.6, 1, 2);
+}
+
+.close-button:hover{
+    -fx-background-color: #fff;
+    -fx-icon-color: #ff0000;
+}
+
+.close-button:pressed{
+    -fx-background-color: #31627B;
+    -fx-icon-color: #fff;
+}
+
+.custom-notification {
+    -fx-background-color: #ff6666;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}

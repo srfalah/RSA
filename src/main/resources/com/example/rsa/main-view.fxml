@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import org.kordamp.ikonli.javafx.FontIcon?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1000.0" styleClass="root" stylesheets="@../../../styles/style.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.rsa.MainViewController">
+   <top>
+      <HBox alignment="CENTER_LEFT" prefHeight="120.0" prefWidth="200.0" styleClass="title-pane" stylesheets="@../../../styles/style.css" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+         </BorderPane.margin>
+         <children>
+            <ImageView fitHeight="108.0" fitWidth="112.0" pickOnBounds="true" preserveRatio="true" styleClass="title-label">
+               <image>
+                  <Image url="@../../../images/mainlogo.png" />
+               </image>
+            </ImageView>
+            <Label styleClass="title-label" stylesheets="@../../../styles/style.css" text="RSA Cryptography" textFill="WHITE">
+               <font>
+                  <Font name="Arial Black" size="40.0" />
+               </font>
+            </Label>
+            <Button fx:id="exitProgramButton" mnemonicParsing="false" onAction="#closeTheProgram" prefHeight="50.0" prefWidth="50.0" styleClass="close-button" stylesheets="@../../../styles/style.css">
+               <HBox.margin>
+                  <Insets bottom="40.0" left="350.0" />
+               </HBox.margin>
+               <graphic>
+                  <FontIcon iconLiteral="mdi2p-power" iconSize="35" styleClass="close-button" />
+               </graphic>
+            </Button>
+         </children>
+         <padding>
+            <Insets left="30.0" />
+         </padding>
+      </HBox>
+   </top>
+   <center>
+      <HBox prefHeight="100.0" prefWidth="200.0" spacing="10.0" styleClass="center-pane" stylesheets="@../../../styles/style.css" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets bottom="10.0" left="20.0" right="20.0" />
+         </BorderPane.margin>
+         <children>
+            <VBox fx:id="requirementsPane" alignment="TOP_CENTER" prefHeight="200.0" prefWidth="465.0" spacing="10.0" stylesheets="@../../../styles/style.css">
+               <styleClass>
+                  <String fx:value="center-pane" />
+                  <String fx:value="inner-panes" />
+               </styleClass>
+               <children>
+                  <Label text="Requirement" textFill="#31627b">
+                     <font>
+                        <Font name="Arial Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <VBox alignment="CENTER">
+                     <children>
+                        <Label text="Pick 2 prime numbers or generate ones" />
+                        <HBox alignment="CENTER" spacing="20.0">
+                           <children>
+                              <Button fx:id="generatePrimeNumbersButton" mnemonicParsing="false" onAction="#onGeneratePrimes" prefHeight="30.0" prefWidth="30.0" stylesheets="@../../../styles/style.css">
+                                 <graphic>
+                                    <FontIcon fill="#4285f4" iconLiteral="mdi2s-sparkles" iconSize="20" selectionFill="#4285f4" styleClass="button" tabSize="10" wrappingWidth="20.000004291534424" />
+                                 </graphic>
+                                 <HBox.margin>
+                                    <Insets right="10.0" />
+                                 </HBox.margin>
+                              </Button>
+                              <TextField fx:id="value_p_Field" alignment="CENTER" maxWidth="80.0" minWidth="80.0" promptText="p">
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                              </TextField>
+                              <HBox>
+                                 <children>
+                                    <TextField fx:id="value_q_Field" alignment="CENTER" maxWidth="80.0" minWidth="80.0" promptText="q">
+                                       <HBox.margin>
+                                          <Insets left="30.0" />
+                                       </HBox.margin>
+                                    </TextField>
+                                 </children>
+                              </HBox>
+                           </children>
+                           <padding>
+                              <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
+                           </padding>
+                           <VBox.margin>
+                              <Insets right="50.0" />
+                           </VBox.margin>
+                        </HBox>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </VBox>
+                  <HBox alignment="BOTTOM_CENTER">
+                     <children>
+                        <Label text="n    = ">
+                           <font>
+                              <Font name="Consolas" size="16.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="value_n_Field" alignment="CENTER" minWidth="150.0" style="-fx-opacity: 1;" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="BOTTOM_CENTER">
+                     <children>
+                        <Label text="Φ(n) = ">
+                           <font>
+                              <Font name="Consolas" size="16.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="value_PHIn_Field" alignment="CENTER" minWidth="150.0" style="-fx-opacity: 1;" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="BOTTOM_CENTER" layoutX="10.0" layoutY="173.0">
+                     <children>
+                        <Label text="e    = ">
+                           <font>
+                              <Font name="Consolas" size="16.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="value_e_Field" alignment="CENTER" minWidth="150.0" promptText="Enter The value" style="-fx-opacity: 1;" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="BOTTOM_CENTER" layoutX="10.0" layoutY="214.0">
+                     <children>
+                        <Label text="d    = ">
+                           <font>
+                              <Font name="Consolas" size="16.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="value_d_Field" alignment="CENTER" minWidth="150.0" style="-fx-opacity: 1;" />
+                     </children>
+                  </HBox>
+                  <Button fx:id="generateEncKeysButton" disable="true" mnemonicParsing="false" onAction="#onGenerateKeys" prefHeight="45.0" prefWidth="220.0" stylesheets="@../../../styles/style.css" text="Generate the keys">
+                     <graphic>
+                        <FontIcon fill="#4285f4" iconLiteral="mdi2k-key-chain" iconSize="30" rotate="-17.2" selectionFill="#4285f4" styleClass="button" tabSize="10" wrappingWidth="36.8000226020813" />
+                     </graphic>
+                     <VBox.margin>
+                        <Insets top="30.0" />
+                     </VBox.margin>
+                  </Button>
+                  <HBox alignment="BOTTOM_CENTER" layoutX="10.0" layoutY="215.0">
+                     <children>
+                        <Label text="PU = ">
+                           <font>
+                              <Font name="Consolas" size="16.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="publicKeyField" alignment="CENTER" minWidth="300.0" style="-fx-opacity: 1;" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="BOTTOM_CENTER" layoutX="10.0" layoutY="403.0">
+                     <children>
+                        <Label text="PR = ">
+                           <font>
+                              <Font name="Consolas" size="16.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="privateKeyField" alignment="CENTER" minWidth="300.0" style="-fx-opacity: 1;" />
+                     </children>
+                  </HBox>
+                  <Button fx:id="clearEverythingButton" layoutX="132.0" layoutY="356.0" mnemonicParsing="false" onAction="#clearEverything" prefHeight="45.0" prefWidth="220.0" styleClass="clear-button" stylesheets="@../../../styles/style.css" text="Clear Everything">
+                     <graphic>
+                        <FontIcon fill="#4285f4" iconLiteral="mdi2t-trash-can-outline" iconSize="30" selectionFill="#4285f4" tabSize="10" wrappingWidth="36.8000226020813">
+                           <styleClass>
+                              <String fx:value="button" />
+                              <String fx:value="clear-button" />
+                           </styleClass>
+                        </FontIcon>
+                     </graphic>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </Button>
+               </children>
+               <padding>
+                  <Insets top="10.0" />
+               </padding>
+            </VBox>
+            <VBox fx:id="EncryptionPane" alignment="CENTER" disable="true" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="465.0" spacing="15.0" stylesheets="@../../../styles/style.css">
+               <styleClass>
+                  <String fx:value="center-pane" />
+                  <String fx:value="inner-panes" />
+               </styleClass>
+               <children>
+                  <VBox alignment="CENTER" prefHeight="106.0" prefWidth="465.0">
+                     <children>
+                        <Label text="Enter the message">
+                           <font>
+                              <Font name="Arial Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="messageField" alignment="CENTER" maxWidth="300.0" />
+                     </children>
+                  </VBox>
+                  <Button fx:id="encryptButton" disable="true" mnemonicParsing="false" onAction="#onEncrypt" prefHeight="45.0" prefWidth="220.0" stylesheets="@../../../styles/style.css" text="Encrypy">
+                     <graphic>
+                        <FontIcon fill="#4285f4" iconLiteral="mdi2i-incognito-off" iconSize="30" selectionFill="#4285f4" styleClass="button" tabSize="10" wrappingWidth="36.8000226020813" />
+                     </graphic>
+                  </Button>
+                  <VBox alignment="CENTER" layoutX="10.0" layoutY="30.0" prefHeight="106.0" prefWidth="465.0">
+                     <children>
+                        <Label text="Encrypted Message:">
+                           <font>
+                              <Font name="Arial Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="encryptedMessageField" alignment="CENTER" maxWidth="300.0" style="-fx-opacity: 1;" />
+                     </children>
+                  </VBox>
+                  <Button fx:id="decryptButton" disable="true" layoutX="132.0" layoutY="136.0" mnemonicParsing="false" onAction="#onDecrypt" prefHeight="45.0" prefWidth="220.0" stylesheets="@../../../styles/style.css" text="Decrypt">
+                     <graphic>
+                        <FontIcon fill="#4285f4" iconLiteral="mdi2i-incognito" iconSize="30" selectionFill="#4285f4" styleClass="button" tabSize="10" wrappingWidth="36.8000226020813" />
+                     </graphic>
+                  </Button>
+                  <VBox alignment="CENTER" layoutX="10.0" layoutY="182.0" prefHeight="106.0" prefWidth="465.0">
+                     <children>
+                        <Label text="Decrypted Message:">
+                           <font>
+                              <Font name="Arial Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="decryptedMessageField" alignment="CENTER" maxWidth="300.0" style="-fx-opacity: 1;" />
+                     </children>
+                  </VBox>
+               </children>
+               <padding>
+                  <Insets top="20.0" />
+               </padding>
+            </VBox>
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </HBox>
+   </center>
+</BorderPane>
