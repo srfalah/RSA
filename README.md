@@ -14,7 +14,8 @@ Program Functionality:
 - you can decrypt the cipher
 
 
-![Alt text](screenshots/screenshot-1.png)
-![Alt text](screenshots/screenshot-2.png)
-![Alt text](screenshots/screenshot-3.png)
-![Alt text](screenshots/screenshot-4.png)
+![Alt text](https://raw.githubusercontent.com/srfalah/RSA/master/src/main/resources/screenshots/screenshot-1.png)
+![Alt text](https://raw.githubusercontent.com/srfalah/RSA/master/src/main/resources/screenshots/screenshot-2.png)
+![Alt text](https://raw.githubusercontent.com/srfalah/RSA/master/src/main/resources/screenshots/screenshot-3.png)
+![Alt text](https://raw.githubusercontent.com/srfalah/RSA/master/src/main/resources/screenshots/screenshot-4.png)
+
