@@ -12,3 +12,9 @@ Program Functionality:
 - you can write a message as number, the message M should be less than n
 - you can generate the cipher
 - you can decrypt the cipher
+
+
+![Alt text](screenshots/screenshot-1.png)
+![Alt text](screenshots/screenshot-2.png)
+![Alt text](screenshots/screenshot-3.png)
+![Alt text](screenshots/screenshot-4.png)
