@@ -42,8 +42,9 @@ To use the `RSACryptography` library in your Maven project:
   </repository>
 </repositories>
 
----
-
+### 2️⃣ Add the dependency:
+```xml
+ططط
 <dependency>
   <groupId>com.example</groupId>
   <artifactId>rsa</artifactId>
