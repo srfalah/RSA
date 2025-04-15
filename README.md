@@ -41,6 +41,7 @@ To use the `RSACryptography` library in your Maven project:
     <url>https://maven.pkg.github.com/srfalah/rsa</url>
   </repository>
 </repositories>
+```
 
 ### 2️⃣ Add the dependency:
 ```xml
@@ -49,5 +50,6 @@ To use the `RSACryptography` library in your Maven project:
   <artifactId>rsa</artifactId>
   <version>1.0-SNAPSHOT</version>
 </dependency>
+```
 
 
