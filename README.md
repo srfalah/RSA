@@ -22,3 +22,32 @@
 *
 ![Alt text](https://raw.githubusercontent.com/srfalah/RSA/master/src/main/resources/screenshots/screenshot-4.png)
 
+
+
+
+
+---
+
+## 🛠 How to Use This Library in Your Maven Project
+
+To use the `RSACryptography` library in your Maven project:
+
+### 1️⃣ Add GitHub Packages repository to your `pom.xml`:
+
+```xml
+<repositories>
+  <repository>
+    <id>github</id>
+    <url>https://maven.pkg.github.com/srfalah/rsa</url>
+  </repository>
+</repositories>
+
+---
+
+<dependency>
+  <groupId>com.example</groupId>
+  <artifactId>rsa</artifactId>
+  <version>1.0-SNAPSHOT</version>
+</dependency>
+
+
